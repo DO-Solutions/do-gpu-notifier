@@ -6,7 +6,7 @@ module.exports = {
   VAPID_PUBLIC_KEY: process.env.VAPID_PUBLIC_KEY,
   VAPID_PRIVATE_KEY: process.env.VAPID_PRIVATE_KEY,
   VAPID_SUBJECT: process.env.VAPID_SUBJECT || 'mailto:example@example.com',
-  CHECK_INTERVAL: 10000, // 10 seconds
+  CHECK_INTERVAL: 100000, // 100 seconds
   // Regions to check, empty array means check all regions
   REGIONS_TO_CHECK: (process.env.REGIONS_TO_CHECK || 'nyc1,sfo3,fra1').split(','),
   GPU_TYPES: {

@@ -24,6 +24,8 @@ async function checkGpuAvailability(gpuType) {
 
   const gpuConfig = GPU_TYPES[gpuType];
   
+  console.log(`Checking DO API for GPU availability: ${gpuType} (size: ${gpuConfig.size})`);
+  
   try {
     // Request capacity information for this size slug
     const response = await doApiClient.get(`/droplets/capacity?size=${gpuConfig.size}`);
@@ -124,6 +126,8 @@ async function checkGpuAvailability(gpuType) {
 async function checkAllGpuAvailability() {
   const results = {};
   const gpuTypes = Object.keys(GPU_TYPES);
+  
+  console.log(`Starting DO API check for all GPU types: ${gpuTypes.join(', ')}`);
   
   for (const gpuType of gpuTypes) {
     try {
