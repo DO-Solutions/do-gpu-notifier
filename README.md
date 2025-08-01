@@ -1,5 +1,7 @@
 # DO GPU Notifier
 
+![Screenshot](screenshot.jpg)
+
 Real-time GPU availability monitoring for DigitalOcean with push notifications. React frontend + Node.js backend.
 
 ## Features
